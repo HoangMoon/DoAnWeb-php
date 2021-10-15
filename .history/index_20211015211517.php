@@ -66,14 +66,12 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 	<link rel="stylesheet" type="text/css" href="css/contact.css"  media="all">
-	<link rel="stylesheet" type="text/css" href="./css/stylehh.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/styleh.css" media="all">
 </head>
 
 <style>
 	.main-top-w3l, button.w3view-cart , .snipcart-details input.button , .copy-right  {
- background: #9CECFB;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1fa2ff !important;
 } 
 
 .snipcart-details input.button  {
