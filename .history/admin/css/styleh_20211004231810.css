@@ -1,0 +1,29 @@
+.statistical {
+  margin: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 30px;
+}
+
+.list-statis {
+  width: 240px;
+  height: 100px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.list-statis i {
+  font-size: 50px;
+}
+
+span {
+  display: block;
+}
+
+.feed-back {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3d6ef7;
+}

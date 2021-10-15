@@ -1,0 +1,13 @@
+.statistical {
+  margin: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 30px;
+}
+
+.list-statis {
+  width: 240px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}

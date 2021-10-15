@@ -1,0 +1,13 @@
+.pb-sm-5,
+.py-sm-5 {
+  padding-top: 10px !important;
+}
+
+.nav-link {
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+}
+
+.product-sec1 {
+  border-radius: 10px;
+}

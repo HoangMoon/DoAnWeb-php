@@ -1,0 +1,27 @@
+.pb-sm-5,
+.py-sm-5 {
+  padding-top: 10px !important;
+}
+
+.nav-link {
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+}
+
+.product-sec1 {
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 0 !important;
+}
+
+.close1 {
+  right: 0 !important;
+}
+
+table.timetable_sub {
+  width: 98%;
+  margin: 0 auto;
+}
