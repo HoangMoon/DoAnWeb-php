@@ -72,10 +72,7 @@ a.icon-heart:hover {
 	margin-top: 30px;
 }
 .subscrice-container {
-	background: #1A2980;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+		background-color:  #3D6EF7;
     padding: 10px 0px!important;
     /* grid-template-columns: repeat(2, 1fr); */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -143,7 +140,7 @@ h3.subscrice-title {
 }
 button.subscrice-btn {
 		margin: 40px auto 0;
-		width: 120px;
+		width: 100px;
     height: 50px;
 		border: none;
 		outline: none;
@@ -153,7 +150,6 @@ button.subscrice-btn {
 		justify-content: center;
 		align-items: center;
 		border-radius: 10px;
-		cursor: pointer;
 }
 </style>
 <?php 

@@ -229,22 +229,22 @@ iconEye.forEach((item) =>
   })
 );
 
-// const iconEye = document.querySelectorAll(".icon-eye");
+const iconEye = document.querySelectorAll(".icon-eye");
 
-// iconEye.forEach((item) => {
-//   item.addEventListener("click", function (e) {
-// 		e.preventDefault();
-//     const inputPass = this.previousElementSibling; // input
-//     const inputType = inputPass.getAttribute("type"); // lấy ra type input
-//     if (inputType === "password") {
-//       inputPass.setAttribute("type", "text");
-//       e.target.classList.toggle("fa-eye-slash");
-//       e.target.classList.toggle("fa-eye");
-//     } else {
-//       inputPass.setAttribute("type", "password");
-//       e.target.classList.toggle("fa-eye-slash");
-//       e.target.classList.toggle("fa-eye");
-//     }
-//   });
-// });
+iconEye.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    const inputPass = this.previousElementSibling; // input
+    const inputType = inputPass.getAttribute("type"); // lấy ra type input
+    if (inputType === "password") {
+      inputPass.setAttribute("type", "text");
+      e.target.classList.toggle("fa-eye-slash");
+      e.target.classList.toggle("fa-eye");
+    } else {
+      inputPass.setAttribute("type", "password");
+      e.target.classList.toggle("fa-eye-slash");
+      e.target.classList.toggle("fa-eye");
+    }
+  });
+});
+
 	</script>

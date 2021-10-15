@@ -2,9 +2,6 @@
 		input.ip {
 			border-radius: 10px 0px 0px 10px;
 		}
-		.brand img.logo-img {
-			width: 200px;
-		}
 	</style>
 	
 	<!-- footer -->
@@ -13,7 +10,7 @@
 			<div class="container py-md-5 py-sm-4 py-3">
 				<!-- footer first section -->
 				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Doanh nghiệp liên kết</h2>
-				<div class="brand d-flex">
+				<div class="brand">
 					<img src="images/logo1.jpg" alt="" class="logo-img">
 					<img src="images/logo2.jpg" alt="" class="logo-img">
 					<img src="images/logo3.jpg" alt="" class="logo-img">
@@ -181,41 +178,3 @@
 		</div>
 	</div>
 	<!-- //copyright -->
-
-	<script>
-		/*====NOTI=======*/
-function noti(title = "Nguyễn Huy Hoàng", img) {
-  const templateNoti = `<div class="noti d-flex">
-    <img src="https://source.unsplash.com/random" alt="" class="noti-image">
-    <div class="noti-content">
-        <h3 class="noti-data">${title}</h3>
-        <p class="noti-desc">
-            Đã mua 1 sản phẩm lorem <br> <span>vừa xong</span>
-        </p>
-    </div>
-</div>`;
-
-  document.body.insertAdjacentHTML("beforebegin", templateNoti);
-}
-
-const randomTitle = [
-  "Nguyễn Huy Hoàng",
-  "Trần Anh Tuấn",
-  "Nguyễn Thị Thúy",
-  "Bùi Hoàng Hải",
-  "Phạm Văn Thành",
-];
-
-let lastTitle;
-const timer = setInterval(function () {
-  const itemNoti = document.querySelector(".noti");
-  if (itemNoti) {
-    itemNoti.parentNode.removeChild(itemNoti);
-  }
-  const title = randomTitle[Math.floor(Math.random() * randomTitle.length)];
-  if (lastTitle !== title) {
-    noti(title);
-  }
-  lastTitle = title;
-}, 8000);
-	</script>

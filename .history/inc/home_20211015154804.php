@@ -68,21 +68,15 @@ a.icon-heart:hover {
 }
 /*subscrice*/
 
-#subscrice {
-	margin-top: 30px;
-}
-.subscrice-container {
-	background: #1A2980;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+.subscrice-container {
+		background-color:  #3D6EF7;
     padding: 10px 0px!important;
     /* grid-template-columns: repeat(2, 1fr); */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 }
 
 h3.subscrice-title {
@@ -91,9 +85,9 @@ h3.subscrice-title {
 }
 
 .countdown {
-		margin: 30px 0px 10px;
     justify-content: center;
 }
+
 .countdown div {
     position: relative;
     width: 45px;
@@ -102,8 +96,8 @@ h3.subscrice-title {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    color: #3D6EF7;
+    background-color: var(--color);
+    color: var(--bg-color);
     margin: 0px 15px;
     font-size: 20px;
     font-weight: 500;
@@ -117,9 +111,9 @@ h3.subscrice-title {
     left: 0;
     width: 100%;
     height: 35px;
-    background-color: #3D6EF7;
+    background-color: var(--bg-color);
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid var(--bg-1-color);
     font-size: 11px;
     line-height: 35px;
     font-weight: 300;
@@ -141,19 +135,27 @@ h3.subscrice-title {
 .countdown #second::before {
     content: "Second";
 }
+
+.subscrice-form {
+  	margin-top: 30px;
+    width: 284px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.subscrice-input {
+    width: 60%;
+    height: 50px;
+    padding: 0 10px;
+}
+
 button.subscrice-btn {
-		margin: 40px auto 0;
-		width: 120px;
     height: 50px;
 		border: none;
 		outline: none;
-    background-color: #fff;
-		color:#3D6EF7;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10px;
-		cursor: pointer;
+    background-color: transparent;
 }
 </style>
 <?php 
@@ -435,9 +437,12 @@ button.subscrice-btn {
                     <div id="second">NA</div>
                 </div>
             </div>
+            <form class="subscrice-form d-flex" data-aos="zoom-in-down" data-aos-easing="ease-in-out" data-aos-delay="600">
+                <input type="text" name="email" class="subscrice-input" placeholder="Enter your email ">
                 <button type="submit" class="button subscrice-btn data-btn ">
                     Subscrice
                 </button>
+            </form>
         </div>
     </section>
 				</div>
@@ -495,32 +500,3 @@ button.subscrice-btn {
 		</div>
 	</div>
 	<!-- middle section -->
-
-	<script>
-		/* coundown timer*/
-var countDate = new Date("October 31, 2021 00:00:00 ").getTime();
-
-function newYear() {
-  let now = new Date().getTime();
-  gap = countDate - now;
-
-  let second = 1000;
-  let minute = second * 60;
-  let hour = minute * 60;
-  let day = hour * 24;
-
-  let d = Math.floor(gap / day);
-  let h = Math.floor((gap % day) / hour);
-  let m = Math.floor((gap % hour) / minute);
-  let s = Math.floor((gap % minute) / second);
-
-  document.getElementById("day").innerText = d;
-  document.getElementById("hour").innerText = h;
-  document.getElementById("minute").innerText = m;
-  document.getElementById("second").innerText = s;
-}
-
-setInterval(function () {
-  newYear();
-}, 1000);
-	</script>

@@ -66,7 +66,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 	<link rel="stylesheet" type="text/css" href="css/contact.css"  media="all">
-	<link rel="stylesheet" type="text/css" href="./css/styleh.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/stylehh.css" media="all">
 </head>
 
 <style>
@@ -481,7 +481,7 @@ else {
 
 
 	<!-- js-files -->
-	<script  type="text/javascript" src="./js/apph.js"></script>
+	<script src="./js/app.js"></script>
 
   <!-- slider -->
   <script
@@ -527,21 +527,9 @@ else {
       speed: 500,
       fade: true,
       cssEase: 'linear',
-      prevArrow: false,
-      nextArrow: false,
+      prev: false,
 });
   </script>
-    <script >
-		$(".brand").slick({
-			infinite: true,
-			slidesToShow: 4,
-			slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      prevArrow: false,
-      nextArrow: false,
-});
-	</script>
 	<!-- jquery -->
 	<script src="js/jquery-2.2.3.min.js"></script>
 	<!-- //jquery -->

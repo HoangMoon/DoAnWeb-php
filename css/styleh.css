@@ -159,3 +159,48 @@ span.number-buy {
 h3.heading-tittle1 {
   margin-bottom: 30px !important;
 }
+
+/*noti*/
+
+.noti {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 450px;
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  transform: translateY(150%);
+  animation: noti 8s forwards 1 linear;
+}
+
+@keyframes noti {
+  20%,
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150%);
+  }
+}
+
+.noti-image {
+  width: 30%;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.noti-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.noti-desc span {
+  display: block;
+  margin-top: var(--mt-0);
+  font-size: 14px;
+}

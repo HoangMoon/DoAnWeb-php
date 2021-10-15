@@ -24,7 +24,7 @@ h3.heading-tittle {
 		font-size: 21px;
 		color: #fff;
 }
-button.button-cart {
+button.button {
 	width: 50px;
 	height: 45px;
 	background-color: #3D6EF7;
@@ -48,112 +48,6 @@ button.button:hover {
 
 a.icon-heart:hover {
 	color: red;
-}
-
-.banner-smart img {
-	border-radius: 10px;
-}
-.smart-slider  {
-	width: 700px;
-}
-.smart-trend {
-	margin-left: 20px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 20px;
-}
-
-.smart-trend  img {
-	width: 140px;
-}
-/*subscrice*/
-
-#subscrice {
-	margin-top: 30px;
-}
-.subscrice-container {
-	background: #1A2980;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    padding: 10px 0px!important;
-    /* grid-template-columns: repeat(2, 1fr); */
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 10px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-}
-
-h3.subscrice-title {
-    text-align: center;
-    color: #fff;
-}
-
-.countdown {
-		margin: 30px 0px 10px;
-    justify-content: center;
-}
-.countdown div {
-    position: relative;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #fff;
-    color: #3D6EF7;
-    margin: 0px 15px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 10px 0 0 0;
-}
-
-.countdown div::before {
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    background-color: #3D6EF7;
-    color: #fff;
-    border: 1px solid #fff;
-    font-size: 11px;
-    line-height: 35px;
-    font-weight: 300;
-    border-radius: 0 0px 12px 0px;
-}
-
-.countdown #day::before {
-    content: "Days";
-}
-
-.countdown #hour::before {
-    content: "Hour";
-}
-
-.countdown #minute::before {
-    content: "Minute";
-}
-
-.countdown #second::before {
-    content: "Second";
-}
-button.subscrice-btn {
-		margin: 40px auto 0;
-		width: 120px;
-    height: 50px;
-		border: none;
-		outline: none;
-    background-color: #fff;
-		color:#3D6EF7;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10px;
-		cursor: pointer;
 }
 </style>
 <?php 
@@ -268,7 +162,8 @@ button.subscrice-btn {
 													<input type="hidden" name="soluong" value="1" />
 													<!-- <input type="hidden" name="mahang" value="<?php echo $row_ban['mahang'] ?>" /> -->
 													<div class="btn-buy">
-														<button type="submit" name="themgiohang" value = "" class="button-cart" >
+														<!-- <input  type="submit" name="themgiohang" value = "" class="button" /></div> -->
+														<button type="submit" name="themgiohang" value = "" class="button" >
 															<i class="fa fa-cart-plus" aria-hidden="true"></i>
 														</button>
 														<div class="social-cart">
@@ -424,40 +319,26 @@ button.subscrice-btn {
 						<!-- //best seller -->
 					</div>
 					<!-- //product right -->
-					<section id="subscrice">
-        <div class="subscrice-container container d-grid d-flex">
-            <div class="subscrice-container__data" data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="300">
-                <h3 class="data-subtitle subscrice-title ">Subscrice And Sale <br> 50% OFF.</h3>
-                <div class="countdown d-flex ">
-                    <div id="day">NA</div>
-                    <div id="hour">NA</div>
-                    <div id="minute">NA</div>
-                    <div id="second">NA</div>
-                </div>
-            </div>
-                <button type="submit" class="button subscrice-btn data-btn ">
-                    Subscrice
-                </button>
-        </div>
-    </section>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //top products -->
-	<div class="banner-smart container d-flex mb-3">
+	<div class="banner-smart">
 		<div class="smart-slider">
-			<img src="images/anh5.jpg" alt="">
-			<img src="images/anh6.png" alt="">
-			<img src="images/anh7.png" alt="">
+			<img src="../images/anh5.jpg" alt="">
+			<img src="../images/anh6.jpg" alt="">
+			<img src="../images/anh7.jpg" alt="">
 		</div>
 		<div class="smart-trend">
-			<img src="images/anh1.png" alt="" class="item-trend">
-			<img src="images/anh2.png" alt="" class="item-trend">
-			<img src="images/anh3.png" alt="" class="item-trend">
-			<img src="images/anh4.png" alt="" class="item-trend">
+			
 		</div>
 	</div>
+
+
+
+
+
 
 	<!-- middle section -->
 	<div class="join-w3l1 py-sm-5 py-4">
@@ -495,32 +376,3 @@ button.subscrice-btn {
 		</div>
 	</div>
 	<!-- middle section -->
-
-	<script>
-		/* coundown timer*/
-var countDate = new Date("October 31, 2021 00:00:00 ").getTime();
-
-function newYear() {
-  let now = new Date().getTime();
-  gap = countDate - now;
-
-  let second = 1000;
-  let minute = second * 60;
-  let hour = minute * 60;
-  let day = hour * 24;
-
-  let d = Math.floor(gap / day);
-  let h = Math.floor((gap % day) / hour);
-  let m = Math.floor((gap % hour) / minute);
-  let s = Math.floor((gap % minute) / second);
-
-  document.getElementById("day").innerText = d;
-  document.getElementById("hour").innerText = h;
-  document.getElementById("minute").innerText = m;
-  document.getElementById("second").innerText = s;
-}
-
-setInterval(function () {
-  newYear();
-}, 1000);
-	</script>

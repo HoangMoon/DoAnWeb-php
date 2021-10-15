@@ -66,7 +66,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 	<link rel="stylesheet" type="text/css" href="css/contact.css"  media="all">
-	<link rel="stylesheet" type="text/css" href="./css/styleh.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/stylehh.css" media="all">
 </head>
 
 <style>
@@ -481,7 +481,7 @@ else {
 
 
 	<!-- js-files -->
-	<script  type="text/javascript" src="./js/apph.js"></script>
+	<script  type="text/javascript" src="./js/app.js"></script>
 
   <!-- slider -->
   <script
