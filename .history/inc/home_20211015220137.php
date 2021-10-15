@@ -27,7 +27,7 @@ h3.heading-tittle {
 button.button-cart {
 	width: 50px;
 	height: 45px;
-	background-color: #3494E6;
+	background-color: #3D6EF7;
 	border: none;
 	outline: none;
 	border-radius: 5px;
@@ -154,15 +154,6 @@ button.subscrice-btn {
 		align-items: center;
 		border-radius: 10px;
 		cursor: pointer;
-}
-
-.app {
-	margin-top: 20px;
-}
-.app img {
-	width: 100%;
-	margin: 10px auto;
-	padding: 0px 10px;
 }
 </style>
 <?php 
@@ -447,10 +438,6 @@ button.subscrice-btn {
                 <button type="submit" class="button subscrice-btn data-btn ">
                     Subscrice
                 </button>
-								<div class="app">
-									<img src="./images/app1.png" alt="" class="app-image">
-									<img src="./images/app2.png" alt="" class="app-image">
-								</div>
         </div>
     </section>
 				</div>
@@ -480,12 +467,12 @@ button.subscrice-btn {
 					<div class="join-agile text-left p-4">
 						<div class="row">
 							<div class="col-sm-7 offer-name">
-								<h6>Sản phẩm nổi bật</h6>
-								<h4 class="mt-2 mb-3">Iphone 13</h4>
+								<h6>Smooth, Rich & Loud Audio</h6>
+								<h4 class="mt-2 mb-3">Branded Headphones</h4>
 								<p>Sale up to 25% off all in store</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/medium_371365_371198715hclsohbl.jpg" alt="" class="img-fluid">
+								<img src="images/off1.png" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -499,7 +486,7 @@ button.subscrice-btn {
 								<p>Free shipping order over $100</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/medium_372076_6443430sd.jpg" alt="" class="img-fluid">
+								<img src="images/off2.png" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>

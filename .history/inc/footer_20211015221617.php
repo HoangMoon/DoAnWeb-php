@@ -15,7 +15,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   max-width: 450px;
   width: 100%;
-  height: 130px;
+  height: 120px;
   border-radius: 10px;
   transform: translateY(150%);
   animation: noti 10s forwards 5 linear;
@@ -240,8 +240,7 @@
         <div class="noti-content ">
             <h3 class="noti-data "><?php echo $row_noti['name'] ?></h3>
             <p class="noti-desc ">
-							<p>Đã mua</p>
-							<?php echo $row_noti['sanpham_name'] ?><br> <span>vừa xong</span>
+							Đã mua <?php echo $row_noti['sanpham_name'] ?><br> <span>vừa xong</span>
             </p>
         </div>
     </div>

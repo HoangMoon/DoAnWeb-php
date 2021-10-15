@@ -15,7 +15,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   max-width: 450px;
   width: 100%;
-  height: 130px;
+  height: 120px;
   border-radius: 10px;
   transform: translateY(150%);
   animation: noti 10s forwards 5 linear;

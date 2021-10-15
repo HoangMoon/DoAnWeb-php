@@ -5,51 +5,6 @@
 		.brand img.logo-img {
 			width: 200px;
 		}
-		/*noti*/
-
-.noti {
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-  background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  max-width: 450px;
-  width: 100%;
-  height: 130px;
-  border-radius: 10px;
-  transform: translateY(150%);
-  animation: noti 10s forwards 5 linear;
-  z-index: 20;
-}
-
-@keyframes noti {
-  20%,
-  80% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(150%);
-  }
-}
-
-.noti-image {
-  width: 30%;
-  height: 120px;
-  flex-shrink: 0;
-  border-radius: inherit;
-  object-fit: cover;
-}
-
-.noti-content {
-  padding: 15px;
-  flex: 1;
-}
-
-.noti-desc span {
-  display: block;
-  margin-top: var(--mt-0);
-  font-size: 14px;
-}
 	</style>
 	
 	<!-- footer -->
@@ -228,23 +183,23 @@
 	<!-- //copyright -->
 
 	<?php
-		$sql_product = mysqli_query($con, "SELECT * FROM tbl_donhang ORDER BY tbl_donhang.donhang_id DESC");
+		$sql_product = mysqli_query($con, "SELECT * FROM tbl_donhang");
 		$row_sanpham = mysqli_fetch_array($sql_product);
 		$sanpham_id = $row_sanpham['donhang_id'];
-		$sql_sanpham = mysqli_query($con, "SELECT * FROM tbl_donhang , tbl_sanpham, tbl_khachhang WHERE tbl_sanpham.sanpham_id = tbl_donhang.sanpham_id AND tbl_khachhang.khachhang_id = tbl_donhang.khachhang_id ORDER BY tbl_donhang.donhang_id DESC");
+		$sql_sanpham = mysqli_query($con, "SELECT * FROM tbl_donhang , tbl_sanpham, tbl_khachhang WHERE tbl_sanpham.sanpham_id = tbl_donhang.sanpham_id AND tbl_khachhang.khachhang_id = tbl_donhang.khachhang_id");
 		while($row_noti = mysqli_fetch_array($sql_sanpham)){
-				if($row_noti['donhang_id'] == $sanpham_id) {
+			if($row_noti['donhang_id'] == $sanpham_id) {
 				?>
 				<div class="noti d-flex ">
         <img src="images/<?php echo $row_noti['sanpham_image'] ?>" alt=" " class="noti-image">
         <div class="noti-content ">
             <h3 class="noti-data "><?php echo $row_noti['name'] ?></h3>
             <p class="noti-desc ">
-							<p>Đã mua</p>
-							<?php echo $row_noti['sanpham_name'] ?><br> <span>vừa xong</span>
+                Đã mua 1 sản phẩm lorem <br> <span>vừa xong</span>
             </p>
         </div>
     </div>
+	?>
 	<?php
 			}
 		}

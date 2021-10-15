@@ -27,7 +27,7 @@ h3.heading-tittle {
 button.button-cart {
 	width: 50px;
 	height: 45px;
-	background-color: #3494E6;
+	background-color: #3D6EF7;
 	border: none;
 	outline: none;
 	border-radius: 5px;
