@@ -1,4 +1,4 @@
-<style>
+	<style>
 		input.ip {
 			border-radius: 10px 0px 0px 10px;
 		}
@@ -251,7 +251,6 @@
 		</div>
 	</div>
 	<!-- //copyright -->
-
 	<?php
 		$sql_product = mysqli_query($con, "SELECT * FROM tbl_donhang ORDER BY tbl_donhang.donhang_id DESC");
 		$row_sanpham = mysqli_fetch_array($sql_product);
@@ -260,11 +259,11 @@
 		while($row_noti = mysqli_fetch_array($sql_sanpham)){
 				if($row_noti['donhang_id'] == $sanpham_id) {
 				?>
-				<div class="noti d-flex ">
+				<div class="noti d-flex">
         <img src="images/<?php echo $row_noti['sanpham_image'] ?>" alt=" " class="noti-image">
-        <div class="noti-content ">
-            <h3 class="noti-data "><?php echo $row_noti['name'] ?></h3>
-            <p class="noti-desc ">
+        <div class="noti-content">
+            <h3 class="noti-data"><?php echo $row_noti['name'] ?></h3>
+            <p class="noti-desc">
 							<p>Đã mua</p>
 							<?php echo $row_noti['sanpham_name'] ?><br> <span>vừa xong</span>
             </p>

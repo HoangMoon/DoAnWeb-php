@@ -1,4 +1,4 @@
-<style>
+	<style>
 		input.ip {
 			border-radius: 10px 0px 0px 10px;
 		}
@@ -251,7 +251,6 @@
 		</div>
 	</div>
 	<!-- //copyright -->
-
 	<?php
 		$sql_product = mysqli_query($con, "SELECT * FROM tbl_donhang ORDER BY tbl_donhang.donhang_id DESC");
 		$row_sanpham = mysqli_fetch_array($sql_product);
