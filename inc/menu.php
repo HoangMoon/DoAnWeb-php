@@ -71,8 +71,15 @@
 								<a class="dropdown-item" href="payment.html">Thanh toán</a>
 							</div>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="?quanly=lienhe">Liên hệ</a>
+						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+							
+							<a class="nav-link dropdown-toggle" href="?quanly=lienhe" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Liên hệ
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="?quanly=recruitment">Recruitment</a>
+								<a class="dropdown-item" href="?quanly=lienhe">Contact Us</a>
+						</div>
 						</li>
 					</ul>
 				</div>
