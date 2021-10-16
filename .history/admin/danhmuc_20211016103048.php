@@ -11,7 +11,7 @@
   else if(isset($_POST['capnhatdanhmuc'])) {
     $id_danhmuc = $_POST['id_danhmuc']; 
     $tendanhmuc = $_POST['danhmuc'];
-    $sql_update = mysqli_query($con, "UPDATE `tbl_category` SET `category_name`='$tendanhmuc' WHERE `category_id`='$id_danhmuc'");
+    $sql_update = mysqli_query($con, "UPDATE `tbl_category` SET `category_name`='$id_danhmuc' WHERE `category_id`='$tendanhmuc'");
     // header('Location: danhmuc.php');
   }
   if(isset($_GET['xoa'])) {

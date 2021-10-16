@@ -169,10 +169,10 @@ button.subscrice-btn {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
+	
 }
 .info-sale img {
-	/* width: 285px; */
-	width: 100%;
+	width: 285px;
 	object-fit: cover;
 	margin-bottom: 20px;
 	border-radius: 10px;

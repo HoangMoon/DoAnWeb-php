@@ -5,10 +5,10 @@
 		.brand img.logo-img {
 			width: 200px;
 		}
-		.brand .slick-track {
+		/* .slick-track {
 			display: flex;
 			align-items: center;
-		}
+		} */
 		/*noti*/
 
 .noti {
@@ -62,7 +62,7 @@
 			<div class="container py-md-5 py-sm-4 py-3">
 				<!-- footer first section -->
 				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Doanh nghiệp liên kết</h2>
-				<div class="brand d-flex align-items-center">
+				<div class="brand d-flex">
 					<img src="images/logo1.jpg" alt="" class="logo-img">
 					<img src="images/logo2.jpg" alt="" class="logo-img">
 					<img src="images/logo3.jpg" alt="" class="logo-img">

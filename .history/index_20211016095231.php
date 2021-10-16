@@ -544,6 +544,16 @@ else {
       nextArrow: false,
 });
 	</script>
+   <script >
+		$(".info-sale").slick({
+			infinite: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: false,
+      nextArrow: false,
+});
 	</script>
 	<!-- jquery -->
 	<script src="js/jquery-2.2.3.min.js"></script>

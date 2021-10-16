@@ -169,6 +169,7 @@ button.subscrice-btn {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
+	
 }
 .info-sale img {
 	/* width: 285px; */

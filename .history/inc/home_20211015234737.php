@@ -54,7 +54,7 @@ a.icon-heart:hover {
 	border-radius: 10px;
 }
 .smart-slider  {
-	width: 800px;
+	width: 700px;
 }
 .smart-trend {
 	margin-left: 20px;
@@ -64,7 +64,7 @@ a.icon-heart:hover {
 }
 
 .smart-trend  img {
-	width: 150px;
+	width: 140px;
 }
 /*subscrice*/
 
@@ -167,12 +167,9 @@ button.subscrice-btn {
 
 .info-sale {
 	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
 }
 .info-sale img {
-	/* width: 285px; */
-	width: 100%;
+	width: 285px;
 	object-fit: cover;
 	margin-bottom: 20px;
 	border-radius: 10px;

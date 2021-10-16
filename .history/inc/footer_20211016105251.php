@@ -5,10 +5,10 @@
 		.brand img.logo-img {
 			width: 200px;
 		}
-		.brand .slick-track {
+		.brand.slick-track {
 			display: flex;
 			align-items: center;
-		}
+		} */
 		/*noti*/
 
 .noti {

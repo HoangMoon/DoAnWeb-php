@@ -8,7 +8,7 @@
 		.brand .slick-track {
 			display: flex;
 			align-items: center;
-		}
+		} */
 		/*noti*/
 
 .noti {

@@ -54,7 +54,7 @@ a.icon-heart:hover {
 	border-radius: 10px;
 }
 .smart-slider  {
-	width: 800px;
+	width: 700px;
 }
 .smart-trend {
 	margin-left: 20px;
@@ -64,7 +64,7 @@ a.icon-heart:hover {
 }
 
 .smart-trend  img {
-	width: 150px;
+	width: 140px;
 }
 /*subscrice*/
 
@@ -167,15 +167,10 @@ button.subscrice-btn {
 
 .info-sale {
 	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
 }
 .info-sale img {
-	/* width: 285px; */
-	width: 100%;
+	width: 285px;
 	object-fit: cover;
-	margin-bottom: 20px;
-	border-radius: 10px;
 }
 </style>
 <?php 
@@ -468,12 +463,6 @@ button.subscrice-btn {
     </section>
 						<div class="info-sale">
 							<img src="./images/samsung.png" alt="">
-							<img src="./images/giadung.png" alt="">
-							<img src="./images/locnuoc.png" alt="">
-							<img src="./images/micro.png" alt="">
-							<img src="./images/giadung2.png" alt="">
-							<img src="./images/bep.png" alt="">
-							<img src="./images/massa.png" alt="">
 						</div>
 				</div>
 			</div>
