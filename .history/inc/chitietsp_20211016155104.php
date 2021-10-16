@@ -316,7 +316,7 @@ else {
 						</div>
 						<p class="shipp-add">Đơn vị vận chuyển</p>
 						<img class="shipper" src="./images/ctsp.png" alt="">
-						<p class="shipp-add">Khách hàng đánh giá</p>
+						<p class="shipp-add">Khách hành đáng giá</p>
 						<div class="review-voted">
                     <div class="voted-item">
                         <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>

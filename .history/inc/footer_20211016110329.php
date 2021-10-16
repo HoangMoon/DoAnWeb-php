@@ -54,11 +54,6 @@
   margin-top: var(--mt-0);
   font-size: 14px;
 }
-
-.pay img {
-	border-radius: 5px;
-  width: 40px;
-}
 	</style>
 	
 	<!-- footer -->

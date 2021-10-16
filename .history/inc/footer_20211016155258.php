@@ -57,7 +57,7 @@
 
 .pay img {
 	border-radius: 5px;
-  width: 40px;
+    width: 40px;
 }
 	</style>
 	
