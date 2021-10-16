@@ -35,6 +35,9 @@
                   <li><a href="./xulybaiviet.php"><i class="fa fa-bar-chart-o"></i> Bài viết<span class="fa fa-chevron-down"></span></a>
                   </li>
                   <li><a href="./xulylienhe.php"><i class="fa fa-desktop"></i> Quản lý liên hệ <span class="fa fa-chevron-down"></span></a>
+                  </li>
+                  <li><a href="./xulytuyendung.php"><i class="fa fa-bar-chart-o"></i> Tuyển dụng<span class="fa fa-chevron-down"></span></a>
+                  </li>
                 </ul>
               </div>
             </div>
