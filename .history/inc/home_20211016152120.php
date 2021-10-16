@@ -228,7 +228,7 @@ button.subscrice-btn {
 								<div class="col-md-4 product-men mt-5 product-item">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img style="object-fit: cover;" src="images/<?php echo $row_sanpham['sanpham_image'] ?>" width="250px" alt="">
+											<img style="object-fit: cover;" src="images/<?php echo $row_sanpham['sanpham_image'] ?>" width="200px" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="link-product-add-cart">Xem sản phẩm</a>

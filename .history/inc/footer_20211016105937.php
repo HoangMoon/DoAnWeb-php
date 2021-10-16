@@ -54,11 +54,6 @@
   margin-top: var(--mt-0);
   font-size: 14px;
 }
-
-.pay img {
-	border-radius: 5px;
-  width: 40px;
-}
 	</style>
 	
 	<!-- footer -->
@@ -233,21 +228,19 @@
   	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<div class="footer-bt d-flex justify-content-between align-items-center">
-				<p class="text-white">© 2021 HH Store. Bản quyền sỡ hữu | Design by Huy Hoàng
-					<a href="http://w3layouts.com"> EPU.</a>
-				</p>
-					<div class="pay">
-						<img src="./images/pay1.png" alt="">
-						<img src="./images/pay2.png" alt="">
-						<img src="./images/pay3.png" alt="">
-						<img src="./images/pay4.png" alt="">
-						<img src="./images/pay5.png" alt="">
-						<img src="./images/pay6.png" alt="">
-						<img src="./images/pay7.png" alt="">
-						<img src="./images/pay8.png" alt="">
-					</div>
-			</div>
+			<p class="text-white">© 2021 HH Store. Bản quyền sỡ hữu | Design by Huy Hoàng
+				<a href="http://w3layouts.com"> EPU.</a>
+			</p>
+				<div class="pay">
+					<img src="./images/pay1.png" alt="">
+					<img src="./images/pay2.png" alt="">
+					<img src="./images/pay3.png" alt="">
+					<img src="./images/pay4.png" alt="">
+					<img src="./images/pay5.png" alt="">
+					<img src="./images/pay6.png" alt="">
+					<img src="./images/pay7.png" alt="">
+					<img src="./images/pay8.png" alt="">
+				</div>
 		</div>
 	</div>
 	<!-- //copyright -->

@@ -1,8 +1,6 @@
 <style>
-	/* chi tiet sp*/
-	  i.fa-star {
-    color: coral;
-}
+	 /* chi tiet sp*/
+
 .form-cart {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 30px;
@@ -115,18 +113,11 @@ button.button:hover {
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 }
 
 .flex-control-thumbs img {
 	width: 150px;
 	object-fit: cover;
-	padding: 3px;
-	border-radius: 5px;
-}
-
-.flex-control-thumbs img:focus {
-	border-color: #1da1f2;
 }
 
 .product-title p.heading-pd {
@@ -141,59 +132,10 @@ button.button:hover {
 	font-weight: 600;
 	color: black;
 }
+
 img.shipper {
 	width: 600px;
 	object-fit: cover;
-}
-
-.review-voted {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.voted-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.bar-vote {
-    width: 86%;
-    height: 6px;
-    border-radius: 5rem;
-    border: 1px solid #eee;
-    margin: 0 10px;
-}
-.bar-percent {
-	height: 100%;
-	background-color: #07a787;
-	border-radius: inherit;
-}
-.bar-percent-1 {
-    height: 100%;
-    background-color: #4e54c8;
-    border-radius: inherit;
-}
-
-.bar-percent-2 {
-    height: 100%;
-    background-color: #f34770;
-    border-radius: inherit;
-}
-
-.bar-percent-3 {
-    height: 100%;
-    background-color: #42d697;
-    border-radius: inherit;
-}
-
-.bar-percent-4 {
-    height: 100%;
-    background-color: #1da1f2;
-    border-radius: inherit;
 }
 </style>
 <?php
@@ -270,7 +212,7 @@ else {
 								<i class="fa fa-star-half-o" aria-hidden="true"></i>
 							</div>
 							<div class="heart">
-								<i class="fa fa-heart-o mr-2" aria-hidden="true"></i>
+								<i class="fa fa-heart-o" aria-hidden="true" style="mr-2"></i>
 								<i class="fa fa-share" aria-hidden="true"></i>
 							</div>
 					</div>
@@ -316,44 +258,6 @@ else {
 						</div>
 						<p class="shipp-add">Đơn vị vận chuyển</p>
 						<img class="shipper" src="./images/ctsp.png" alt="">
-						<p class="shipp-add">Khách hàng đánh giá</p>
-						<div class="review-voted">
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent" style="width: 25%;"></div>
-                        </div>
-                        <span class="number-vote">45</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-1" style="width: 15%;"></div>
-                        </div>
-                        <span class="number-vote">75</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-2" style="width: 10%;"></div>
-                        </div>
-                        <span class="number-vote">100</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-3" style="width:50%;"></div>
-                        </div>
-                        <span class="number-vote">195</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-4" style="width: 75%;"></div>
-                        </div>
-                        <span class="number-vote">255</span>
-                    </div>
-                </div>
 					</div>
 				</div>
 			</div>

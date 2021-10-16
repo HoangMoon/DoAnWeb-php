@@ -1,8 +1,6 @@
 <style>
-	/* chi tiet sp*/
-	  i.fa-star {
-    color: coral;
-}
+	 /* chi tiet sp*/
+
 .form-cart {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 30px;
@@ -161,17 +159,13 @@ img.shipper {
 }
 
 .bar-vote {
-    width: 86%;
+    width: 90%;
     height: 6px;
     border-radius: 5rem;
     border: 1px solid #eee;
     margin: 0 10px;
 }
-.bar-percent {
-	height: 100%;
-	background-color: #07a787;
-	border-radius: inherit;
-}
+
 .bar-percent-1 {
     height: 100%;
     background-color: #4e54c8;
@@ -316,7 +310,6 @@ else {
 						</div>
 						<p class="shipp-add">Đơn vị vận chuyển</p>
 						<img class="shipper" src="./images/ctsp.png" alt="">
-						<p class="shipp-add">Khách hàng đánh giá</p>
 						<div class="review-voted">
                     <div class="voted-item">
                         <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>

@@ -1,84 +1,4 @@
 <style>
-	/* chi tiet sp*/
-	  i.fa-star {
-    color: coral;
-}
-.form-cart {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 30px;
-}
-
-.occasion-cart .snipcart-details {
-  width: 100% !important;
-  margin: 0;
-}
-
-.add-cart input.number-cart {
-    width: 100px;
-    margin-right: 30px;
-    outline: none;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.btn-cart {
-    width: 40%;
-    height: 50px;
-}
-
-.social-interact a.modal-social i {
-    border: 1px solid #ddd;
-		border-radius: 5px;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    line-height: 40px;
-    text-align: center;
-    font-size: 20px;
-    margin-right: 6px;
-}
-
-a.modal-social i.facebook {
-    color: #4867aa;
-    transition: all 0.25s linear;
-}
-
-a.modal-social i.facebook:hover {
-    background-color: #4867aa;
-    color: #fff;
-}
-
-a.modal-social i.twitter {
-    transition: all 0.25s linear;
-    color: #1da1f2;
-}
-
-a.modal-social i.twitter:hover {
-    background-color: #1da1f2;
-    color: #fff;
-}
-
-a.modal-social i.instagram {
-    color: #dd5144;
-    transition: all 0.25s linear;
-}
-
-a.modal-social i.instagram:hover {
-    background-color: #dd5144;
-    color: #fff;
-}
-
-a.modal-social i.youtube {
-    color: #bd081b;
-    transition: all 0.25s linear;
-}
-
-a.modal-social:hover i.youtube {
-    background-color: #bd081b;
-    color: #fff;
-}
-
 	.btn-buy i.fa-cart-plus {
     position: absolute;
     top: 50%;
@@ -115,18 +35,11 @@ button.button:hover {
 	display: flex !important;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
 }
 
 .flex-control-thumbs img {
 	width: 150px;
 	object-fit: cover;
-	padding: 3px;
-	border-radius: 5px;
-}
-
-.flex-control-thumbs img:focus {
-	border-color: #1da1f2;
 }
 
 .product-title p.heading-pd {
@@ -135,65 +48,15 @@ button.button:hover {
 	font-weight: bold;
 }
 
-.shipp-add {
+.ship-add {
 	margin: 20px 0 30px;
-	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: bold;
 	color: black;
 }
+
 img.shipper {
 	width: 600px;
 	object-fit: cover;
-}
-
-.review-voted {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.voted-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.bar-vote {
-    width: 86%;
-    height: 6px;
-    border-radius: 5rem;
-    border: 1px solid #eee;
-    margin: 0 10px;
-}
-.bar-percent {
-	height: 100%;
-	background-color: #07a787;
-	border-radius: inherit;
-}
-.bar-percent-1 {
-    height: 100%;
-    background-color: #4e54c8;
-    border-radius: inherit;
-}
-
-.bar-percent-2 {
-    height: 100%;
-    background-color: #f34770;
-    border-radius: inherit;
-}
-
-.bar-percent-3 {
-    height: 100%;
-    background-color: #42d697;
-    border-radius: inherit;
-}
-
-.bar-percent-4 {
-    height: 100%;
-    background-color: #1da1f2;
-    border-radius: inherit;
 }
 </style>
 <?php
@@ -261,18 +124,12 @@ else {
 
 				<div class="col-lg-7 single-right-left simpleCart_shelfItem">
 					<h3 class="mb-3"><?php echo $row_chitiet['sanpham_name'] ?></h3>
-					<div class="star-vote d-flex justify-content-between">
-							<div class="start">
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star-half-o" aria-hidden="true"></i>
-							</div>
-							<div class="heart">
-								<i class="fa fa-heart-o mr-2" aria-hidden="true"></i>
-								<i class="fa fa-share" aria-hidden="true"></i>
-							</div>
+					<div class="star-vote flex">
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star" aria-hidden="true"></i>
+							<i class="fa fa-star-half-o" aria-hidden="true"></i>
 					</div>
 					<p class="mb-3">
 						<span class="item_price"><?php echo number_format($row_chitiet['sanpham_giakhuyenmai']).'vnd' ?></span>
@@ -316,44 +173,6 @@ else {
 						</div>
 						<p class="shipp-add">Đơn vị vận chuyển</p>
 						<img class="shipper" src="./images/ctsp.png" alt="">
-						<p class="shipp-add">Khách hàng đánh giá</p>
-						<div class="review-voted">
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent" style="width: 25%;"></div>
-                        </div>
-                        <span class="number-vote">45</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-1" style="width: 15%;"></div>
-                        </div>
-                        <span class="number-vote">75</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-2" style="width: 10%;"></div>
-                        </div>
-                        <span class="number-vote">100</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-3" style="width:50%;"></div>
-                        </div>
-                        <span class="number-vote">195</span>
-                    </div>
-                    <div class="voted-item">
-                        <span>5 <i class="fa fa-star" aria-hidden="true"></i></span>
-                        <div class="bar bar-vote">
-                            <div class="bar-percent-4" style="width: 75%;"></div>
-                        </div>
-                        <span class="number-vote">255</span>
-                    </div>
-                </div>
 					</div>
 				</div>
 			</div>
