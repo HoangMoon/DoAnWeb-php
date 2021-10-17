@@ -250,10 +250,10 @@ else {
 						</div>
 						<div class="product-single-w3l product-title">
 								<p class="heading-pd">Mô tả sản phẩm</p>
-								<p><?php echo $row_chitiet['sanpham_chitiet']?></p>
+								<p><?php echo $row_chitiet['sanpham_mota']?></p>
 								<br>
 								<p class="heading-pd">Chi tiết sản phẩm</p>
-								<p><?php echo $row_chitiet['sanpham_mota']?></p>
+								<p><?php echo $row_chitiet['sanpham_chitiet']?></p>
 								<br>
 							</div>
 					</div>
