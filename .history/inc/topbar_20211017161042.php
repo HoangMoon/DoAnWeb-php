@@ -55,8 +55,7 @@
 	}
 	.social-share {
 		width: 100%;
-		max-width: 300px;
-		margin: 0 auto;
+		max-width: 400px;
 	}
 	.social-share-icon {
 		width: 40px;

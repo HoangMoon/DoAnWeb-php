@@ -92,7 +92,7 @@
 								<td class="invert"><?php echo $i ?></td>
 								<td class="invert-image">
 									<a href="single.html">
-										<img style="width:unset;object-fit: cover;" src="images/<?php echo $row_fetch_giohang['hinhanh'] ?>" alt=" " height="130" class="img-responsive">
+										<img style="object-fit: cover;" src="images/<?php echo $row_fetch_giohang['hinhanh'] ?>" alt=" " height="130" class="img-responsive">
 									</a>
 								</td>
 								<td class="invert">
