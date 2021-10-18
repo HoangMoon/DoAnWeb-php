@@ -66,7 +66,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 	<link rel="stylesheet" type="text/css" href="css/contact.css"  media="all">
-	<link rel="stylesheet" type="text/css" href="./css/stylehh1.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/stylehh.css" media="all">
 </head>
 
 <style>
@@ -564,14 +564,14 @@ else {
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     }

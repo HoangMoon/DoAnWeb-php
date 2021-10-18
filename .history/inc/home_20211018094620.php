@@ -64,11 +64,6 @@ a.icon-heart:hover {
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 20px;
 }
-.app img {
-	width: 100%;
-	margin: 10px auto;
-	padding: 0px 10px;
-}
 }
 
 /*subscrice*/
@@ -164,6 +159,11 @@ button.subscrice-btn {
 .app {
 	margin-top: 20px;
 }
+.app img {
+	width: 100%;
+	margin: 10px auto;
+	padding: 0px 10px;
+}
 
 .info-sale {
 	margin-top: 20px;
@@ -257,7 +257,7 @@ button.subscrice-btn {
 														$row_ban = mysqli_fetch_array($sql_soluongban);
 														if($row_sanpham['sanpham_id'] = $sanpham_id) {
 											?>
-														<span class="number-buy">
+														<span class="number-buy" style="font-size: 14px">
 														<?php
 														if($row_ban['soluong'] >= 1) {
 														?>

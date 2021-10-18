@@ -15,9 +15,6 @@
 		left: 15px;
 		max-width: 450px;
 	}
-	.noti-image {
-		height: 120px;
-	}
 }
 
 .noti {
@@ -46,6 +43,7 @@
 }
 
 .noti-image {
+  height: 120px;
   flex-shrink: 0;
   border-radius: inherit;
   object-fit: cover;

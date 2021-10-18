@@ -15,9 +15,6 @@
 		left: 15px;
 		max-width: 450px;
 	}
-	.noti-image {
-		height: 120px;
-	}
 }
 
 .noti {
@@ -46,6 +43,7 @@
 }
 
 .noti-image {
+  height: 120px;
   flex-shrink: 0;
   border-radius: inherit;
   object-fit: cover;
@@ -267,7 +265,7 @@
 		while($row_noti = mysqli_fetch_array($sql_sanpham)){
 				if($row_noti['donhang_id'] == $sanpham_id) {
 				?>
-				<div class="noti d-flex">
+				<div class="noti d-flex container">
         <img src="images/<?php echo $row_noti['sanpham_image'] ?>" alt=" " class="noti-image">
         <div class="noti-content ">
             <h3 class="noti-data "><?php echo $row_noti['name'] ?></h3>

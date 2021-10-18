@@ -1,8 +1,48 @@
 <?php
 		$sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC')
 
-	?>	
-	<div class="navbar-inner navbar-menu">
+	?>
+	<style>
+		@media screen and (max-width: 1279px) {
+			.menu-toggle {
+			display: block;
+			z-index: 20;
+			font-size: 25px;
+			margin-left: 30px;
+			display: block;
+			z-index: 20;
+			font-size: 25px;
+			margin-left: 20px;
+			right: -10px;
+			position: relative;
+			cursor: pointer;
+	}
+	.header-menu {
+			position: fixed;
+			top: 0;
+			right: 0;
+			background-color: #fff;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			max-width: 320px;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			row-gap: 20px;
+			font-size: 18px;
+			transform: translateX(100%);
+			transition: all 0.5s linear;
+	}
+	.is-show {
+			transform: translateX(0);
+	}
+	}
+		
+	</style>
+	<div class="navbar-inner">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
@@ -88,3 +128,32 @@
 		</div>
 	</div>
 	<!-- //navigation -->
+	<script>
+		/*=========TOGGLE MENU=============*/
+		const toggleMenu = document.querySelector(".menu-toggle");
+  const headerMenu = document.querySelector(".header-menu");
+  const itemLink = document.querySelectorAll(".item-link");
+
+  toggleMenu.addEventListener("click", function (e) {
+    headerMenu.classList.toggle("is-show");
+    toggleMenu.classList.toggle("fa-bars");
+    toggleMenu.classList.toggle("fa-times");
+  });
+
+  [...itemLink].forEach((item) =>
+    item.addEventListener("click", function (e) {
+      headerMenu.classList.remove("is-show");
+      toggleMenu.classList.toggle("fa-bars");
+      toggleMenu.classList.toggle("fa-times");
+    })
+  );
+
+  document.addEventListener("click", function (e) {
+    if (!headerMenu.contains(e.target) && !e.target.matches(".menu-toggle")) {
+      headerMenu.classList.remove("is-show");
+      toggleMenu.classList.add("fa-bars");
+      toggleMenu.classList.remove("fa-times");
+    }
+  });
+
+	</script>

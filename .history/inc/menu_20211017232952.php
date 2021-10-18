@@ -2,7 +2,7 @@
 		$sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC')
 
 	?>	
-	<div class="navbar-inner navbar-menu">
+	<div class="navbar-inner">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
@@ -88,3 +88,32 @@
 		</div>
 	</div>
 	<!-- //navigation -->
+	<script>
+		/*=========TOGGLE MENU=============*/
+		const toggleMenu = document.querySelector(".menu-toggle");
+  const headerMenu = document.querySelector(".header-menu");
+  const itemLink = document.querySelectorAll(".item-link");
+
+  toggleMenu.addEventListener("click", function (e) {
+    headerMenu.classList.toggle("is-show");
+    toggleMenu.classList.toggle("fa-bars");
+    toggleMenu.classList.toggle("fa-times");
+  });
+
+  [...itemLink].forEach((item) =>
+    item.addEventListener("click", function (e) {
+      headerMenu.classList.remove("is-show");
+      toggleMenu.classList.toggle("fa-bars");
+      toggleMenu.classList.toggle("fa-times");
+    })
+  );
+
+  document.addEventListener("click", function (e) {
+    if (!headerMenu.contains(e.target) && !e.target.matches(".menu-toggle")) {
+      headerMenu.classList.remove("is-show");
+      toggleMenu.classList.add("fa-bars");
+      toggleMenu.classList.remove("fa-times");
+    }
+  });
+
+	</script>

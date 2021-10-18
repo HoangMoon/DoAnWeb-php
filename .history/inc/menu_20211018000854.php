@@ -2,7 +2,7 @@
 		$sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC')
 
 	?>	
-	<div class="navbar-inner navbar-menu">
+	<div class="navbar-inner">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">

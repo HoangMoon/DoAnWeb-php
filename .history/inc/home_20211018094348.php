@@ -52,6 +52,9 @@ a.icon-heart:hover {
 }
 
 @media screen and (min-width: 1280px) {
+	.inner-men-cart-pro .link-product-add-cart {
+    left: 15% !important;
+}
 	.smart-slider  {
 	width: 800px;
 }
@@ -63,11 +66,6 @@ a.icon-heart:hover {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 20px;
-}
-.app img {
-	width: 100%;
-	margin: 10px auto;
-	padding: 0px 10px;
 }
 }
 
@@ -164,6 +162,11 @@ button.subscrice-btn {
 .app {
 	margin-top: 20px;
 }
+.app img {
+	width: 100%;
+	margin: 10px auto;
+	padding: 0px 10px;
+}
 
 .info-sale {
 	margin-top: 20px;
@@ -228,7 +231,7 @@ button.subscrice-btn {
 								<div class="col-md-4 product-men mt-5 product-item">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img class="image-product" style="object-fit: cover;" src="images/<?php echo $row_sanpham['sanpham_image'] ?>"  alt="">
+											<img style="object-fit: cover;" src="images/<?php echo $row_sanpham['sanpham_image'] ?>"  alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="link-product-add-cart">Xem sản phẩm</a>
@@ -257,7 +260,7 @@ button.subscrice-btn {
 														$row_ban = mysqli_fetch_array($sql_soluongban);
 														if($row_sanpham['sanpham_id'] = $sanpham_id) {
 											?>
-														<span class="number-buy">
+														<span class="number-buy" style="font-size: 14px">
 														<?php
 														if($row_ban['soluong'] >= 1) {
 														?>

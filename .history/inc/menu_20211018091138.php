@@ -88,3 +88,13 @@
 		</div>
 	</div>
 	<!-- //navigation -->
+	<script>
+		const navbarInner = document.querySelector(".navbar-menu");
+window.addEventListener("scroll", function (e) {
+  if (this.scrollY >= 200) {
+    navbarInner.classList.add("active-fixed ");
+  } else {
+    navbarInner.classList.remove("active-fixed ");
+  }
+});
+	</script>

@@ -66,7 +66,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 	<link rel="stylesheet" type="text/css" href="css/contact.css"  media="all">
-	<link rel="stylesheet" type="text/css" href="./css/stylehh1.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/styleh1.css" media="all">
 </head>
 
 <style>
@@ -525,7 +525,7 @@ else {
 
 
 	<!-- js-files -->
-	<script  type="text/javascript" src="./js/apph1.js"></script>
+	<script  type="text/javascript" src="./js/apph.js"></script>
 
   <!-- slider -->
   <script
@@ -562,43 +562,6 @@ else {
       }
     },
     {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-	</script>
-  <script>
-    $('.smart-slider').slick({
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      prevArrow: false,
-      nextArrow: false,
-      responsive: [
-    {
-      breakpoint: 1279,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-      }
-    },
-    {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
@@ -616,6 +579,16 @@ else {
     // settings: "unslick"
     // instead of a settings object
   ]
+});
+	</script>
+  <script>
+    $('.smart-slider').slick({
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      prevArrow: false,
+      nextArrow: false,
 });
   </script>
     <script >

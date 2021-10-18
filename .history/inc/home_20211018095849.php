@@ -257,7 +257,7 @@ button.subscrice-btn {
 														$row_ban = mysqli_fetch_array($sql_soluongban);
 														if($row_sanpham['sanpham_id'] = $sanpham_id) {
 											?>
-														<span class="number-buy">
+														<span class="number-buy" style="font-size: 14px">
 														<?php
 														if($row_ban['soluong'] >= 1) {
 														?>

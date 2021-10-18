@@ -12,27 +12,21 @@
 		/*noti*/
 @media screen and (min-width: 1280px) {
 	.noti {
-		left: 15px;
-		max-width: 450px;
-	}
-	.noti-image {
-		height: 120px;
-	}
-}
-
-.noti {
 	align-items: center;
   position: fixed;
   bottom: 15px;
   left: 15px;
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 450px;
   width: 100%;
   height: 130px;
   border-radius: 10px;
   transform: translateY(150%);
   animation: noti 10s forwards 5 linear;
   z-index: 20;
+}
+
 }
 
 @keyframes noti {
@@ -46,6 +40,7 @@
 }
 
 .noti-image {
+  height: 120px;
   flex-shrink: 0;
   border-radius: inherit;
   object-fit: cover;
@@ -267,7 +262,7 @@
 		while($row_noti = mysqli_fetch_array($sql_sanpham)){
 				if($row_noti['donhang_id'] == $sanpham_id) {
 				?>
-				<div class="noti d-flex">
+				<div class="noti d-flex ">
         <img src="images/<?php echo $row_noti['sanpham_image'] ?>" alt=" " class="noti-image">
         <div class="noti-content ">
             <h3 class="noti-data "><?php echo $row_noti['name'] ?></h3>
