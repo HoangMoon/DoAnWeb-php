@@ -21,12 +21,6 @@
     padding: 10px;
     border-radius: 5px;
 }
-
-.btn-cart {
-    width: 40%;
-    height: 50px;
-}
-
 .social-interact a.modal-social i {
     border: 1px solid #ddd;
 		border-radius: 5px;
@@ -80,11 +74,6 @@ a.modal-social:hover i.youtube {
 }
 
 	.btn-buy i.fa-cart-plus {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 15px;
-		font-size: 21px;
 		color: #fff;
 }
 button.button {
@@ -141,11 +130,13 @@ button.button:hover {
 	font-weight: 600;
 	color: black;
 }
-img.shipper {
+
+@media screen and (min-width: 1280px) {
+	img.shipper {
 	width: 600px;
 	object-fit: cover;
 }
-
+}
 .review-voted {
     width: 100%;
     display: flex;

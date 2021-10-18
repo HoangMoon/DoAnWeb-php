@@ -5,8 +5,8 @@ ASC:sắp xép theo cái them vào sau thì nó xếp len đầu -->
 <?php
 		$sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC')
 
-	?>
-	<div class="navbar-inner">
+	?>	
+	<div class="navbar-inner navbar-menu">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="agileits-navi_search">
@@ -30,7 +30,7 @@ ASC:sắp xép theo cái them vào sau thì nó xếp len đầu -->
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto text-center mr-xl-5">
+					<ul class="navbar-nav ml-auto text-center mr-xl-5 header-menu">
 						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
 							<a class="nav-link" href="index.php">Trang chủ
 								<span class="sr-only">(current)</span>
@@ -90,6 +90,7 @@ ASC:sắp xép theo cái them vào sau thì nó xếp len đầu -->
 						</li>
 					</ul>
 				</div>
+				<i class="fa fa-bars menu-toggle" aria-hidden="true"></i>
 			</nav>
 		</div>
 	</div>
