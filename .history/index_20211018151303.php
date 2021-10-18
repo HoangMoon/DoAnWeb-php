@@ -623,6 +623,24 @@ else {
 	</script>
 	<!-- jquery -->
 	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- //jquery -->
+
+	<!-- nav smooth scroll -->
+	<!-- <script>
+		$(document).ready(function () {
+			$(".dropdown").hover(
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
+					$(this).toggleClass('open');
+				},
+				function () {
+					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
+					$(this).toggleClass('open');
+				}
+			);
+		});
+	</script> -->
+	<!-- //nav smooth scroll -->
 		<!-- imagezoom -->
 		<script src="js/imagezoom.js"></script>
 	<!-- //imagezoom -->
@@ -649,37 +667,27 @@ else {
 
 	<!-- smoothscroll -->
 	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
 	<!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-  <!-- Messenger Plugin chat Code -->
-  <div id="fb-root"></div>
-
-<!-- Your Plugin chat code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "111981197792996");
-  chatbox.setAttribute("attribution", "biz_inbox");
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v12.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 </body>
 
 </html>

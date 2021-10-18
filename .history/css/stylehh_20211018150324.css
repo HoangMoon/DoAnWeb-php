@@ -30,6 +30,13 @@ table.timetable_sub {
   background-color: #1fa2ff;
 }
 
+.modal-title {
+  font-size: 26px;
+  color: #0879c9;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 /* .product-row {
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr;
@@ -400,6 +407,9 @@ h3.heading-tittle1 {
   }
   .noti-image {
     height: 110px;
+  }
+  img.shipper {
+    width: 350px;
   }
 }
 

@@ -21,6 +21,12 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+.btn-cart {
+    width: 40%;
+    height: 50px;
+}
+
 .social-interact a.modal-social i {
     border: 1px solid #ddd;
 		border-radius: 5px;
