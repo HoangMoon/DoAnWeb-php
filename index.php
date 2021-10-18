@@ -1,3 +1,7 @@
+<!-- Session trong PHP được dùng để lưu trữ thông tin của người dùng hoặc là lưu trữ tùy chọn cấu hình hệ thống cho người dùng. -->
+<!-- Đăng ký session : session_start() phía trên đầu mỗi file. -->
+<!-- vì tách trang và từ phần và đa có include các phần đó vào nên ỏ các phần khác kocaanf đặt section_start() nữa -->
+<!-- Tất cả Session được lưu trữ trong biến toàn cục $_SESSION -->
 <?php
 	session_start();
 	include "./db/conect.php";

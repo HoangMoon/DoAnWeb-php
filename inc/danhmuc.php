@@ -1,3 +1,8 @@
+<!-- GET và POST:phương thức truyền dữ liệu từ Client lên Server. -->
+<!-- post:(đẩy lên) -->
+<!-- get:lấy -->
+<!-- form action="?quanly=giohang":đương dẫn thục hiên hành đọng của form -->
+
 <?php
 	if(isset($_GET['id'])) {
 		$id = $_GET['id'];

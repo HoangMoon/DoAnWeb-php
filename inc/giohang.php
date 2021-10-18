@@ -19,10 +19,13 @@
 			$sql_giohang = "INSERT INTO tbl_giohang(tensanpham, sanpham_id, giasanpham, hinhanh, soluong) VALUES ('$tensanpham','$sanpham_id','$gia', '$hinhanh','$soluong')";
 		}
 		$insert_row = mysqli_query($con,$sql_giohang);
+		// khi mà muốn thêm sp kiểm tra row đã = 0 location sẽ hướng về trang sp theo sanpham_id
+		// để check số lượng sp trong giỏ hàng
 		if($insert_row==0) {
 			header('Location:index.php?quanly=chitietsp&id='.$sanpham_id);
 		}
 	}
+	// array sản phẩm cập nhật: array([0]=>id_sp[soluong]=>.....)
 		else if (isset($_POST['capnhatsoluong'])) {
 			for($i=0; $i<count($_POST['product_id']); $i++) {
 				$sanpham_id = $_POST['product_id'][$i];
@@ -40,6 +43,11 @@
 			$sql_delete = mysqli_query($con, "DELETE FROM tbl_giohang  WHERE giohang_id = '$id'");
 		}
 ?>
+<!-- Session trong PHP được dùng để lưu trữ thông tin của người dùng hoặc là lưu trữ tùy chọn cấu hình hệ thống cho người dùng.  -->
+<!-- khi lấy dc dữ liệu sản phẩm > tiên shanhf thanh toán; --> -->
+<!-- nếu icó $_POST['thanhtoandangnhap'] tồn tại;gãn $khachhang_id = $_SESSION['khachhang_id'];  -->
+<!-- $mahang = rand(0,9999);:tránh việc chùng lặp đơn hàng vì môi dơn 1 mã  -->
+<!-- vòng for để kiểm tra và lấy thông tin đơnhàng để nhập v ào swql -->
 <?php
 	if(isset($_POST['thanhtoandangnhap'])) {
 			$khachhang_id = $_SESSION['khachhang_id'];
@@ -53,6 +61,7 @@
 			}
 		}
 ?>
+
 	<!-- checkout page -->
 	<div class="privacy py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
@@ -80,6 +89,7 @@
 							</tr>
 						</thead>
 						<tbody>
+							<!-- tính tổng tiền thanh toán băng các cộng hết giá tiền các sp trong giỏ hàng băng t $total += $subtotal;  -->
 							<?php
 							$i =0;
 							$total = 0;

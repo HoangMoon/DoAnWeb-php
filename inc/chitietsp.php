@@ -282,6 +282,7 @@ else {
 				
 					<div class="occasion-cart">
 						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out ">
+						<!-- action="?quanly=giohang":đường đã cho hành động của form;dùng vs phương thức Post -->
 							<form action="?quanly=giohang" method="post" class="form-cart">
 								<fieldset>
 									<input type="hidden" name="tensanpham" value="<?php echo $row_chitiet['sanpham_name'] ?>" />
