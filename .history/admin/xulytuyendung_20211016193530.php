@@ -111,7 +111,7 @@
 
               <td style="text-align: center;">
               <?php
-                $_download = mysqli_query($con,"SELECT * FROM `tbl_cv` ");
+                $_download = mysqli_query($con,"SELECT * FROM `btl_download_cv_file` ");
                while($rows = mysqli_fetch_assoc($_download)){ ?>
                 
               <?php

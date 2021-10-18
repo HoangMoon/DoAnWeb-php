@@ -69,16 +69,8 @@
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
     <link rel="stylesheet" href="./css/clendar.css">
-    <link rel="stylesheet" href="./css/styleh1.css">
+    <link rel="stylesheet" href="./css/stylehh1.css">
     
   </head>
   <body class="nav-md">
@@ -302,10 +294,10 @@
       <div class="app">
       <div class="form-control1">
         <textarea class="content" name="" id="content"> </textarea>
-        <button>Ghi chú</button>
+        <button>Add task</button>
       </div>
       <div id="list-task" class="list-task">
-        <h4>Danh sách cv</h4>
+        <h4>Danh sách task</h4>
         <div class="result"></div>
       </div>
     </div>
@@ -341,7 +333,7 @@
         sc.style.transform = `rotateZ(${ss}deg)`;
 });
     </script>
-    <script src="./js/app1.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>

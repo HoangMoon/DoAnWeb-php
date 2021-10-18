@@ -69,16 +69,8 @@
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
     <link rel="stylesheet" href="./css/clendar.css">
-    <link rel="stylesheet" href="./css/styleh1.css">
+    <link rel="stylesheet" href="./css/stylehh.css">
     
   </head>
   <body class="nav-md">
@@ -146,7 +138,7 @@
                 $sql_yt =  mysqli_query($con, "SELECT *, COUNT(sanpham_yeuthich) AS 'YT' FROM tbl_sanpham WHERE sanpham_yeuthich = 1");
                 $row_yt = mysqli_fetch_array($sql_yt);
               ?>
-              <div class="list-statis total-vote">
+              <div class="list-statis total-order">
               <i class="fa fa-cart-plus" aria-hidden="true"></i>
               <div class="feed-number">
                 <span class="number-txt">
@@ -166,18 +158,14 @@
                 <span class="txt-desc">Sp yêu thích</span>
               </div>
               </div>
-              <?php
-                $sql_cv= mysqli_query($con, "SELECT COUNT(cv_email) AS 'email' FROM tbl_cv");
-                $row_cv = mysqli_fetch_array($sql_cv);
-              ?>
-              <div class="list-statis cv-total">
+              <div class="list-statis total-order">
               <i class="fa fa-cart-plus" aria-hidden="true"></i>
               <div class="feed-number">
-                <span class="number-txt"><?php echo $row_cv['email'] ?></span>
+                <span class="number-txt"><?php echo $row_dd['mahang'] ?></span>
                 <span class="txt-desc">Đơn cv</span>
               </div>
               </div>
-              <div class="list-statis total-online">
+              <div class="list-statis total-order">
               <i class="fa fa-cart-plus" aria-hidden="true"></i>
               <div class="feed-number">
                 <span class="number-txt"><?php echo $row_dd['mahang'] ?></span>
@@ -297,19 +285,7 @@
         </div>
 			</div>
 		</div>
-    <div class="task-chart">
-      <div id="piechart" style="width: 500px; height: 500px;border-radius: 10px"></div>
-      <div class="app">
-      <div class="form-control1">
-        <textarea class="content" name="" id="content"> </textarea>
-        <button>Ghi chú</button>
-      </div>
-      <div id="list-task" class="list-task">
-        <h4>Danh sách cv</h4>
-        <div class="result"></div>
-      </div>
-    </div>
-    </div>
+    <div id="piechart" style="width: 700px; height: 500px;"></div>
 	</section>
           </div>
         </div>
@@ -341,7 +317,7 @@
         sc.style.transform = `rotateZ(${ss}deg)`;
 });
     </script>
-    <script src="./js/app1.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
