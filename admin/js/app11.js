@@ -16,6 +16,7 @@ iconEye.forEach((item) =>
   })
 );
 
+// todo -list
 let btnAddTaskEl = document.querySelector("button");
 let taskNameEl = document.querySelector(".content");
 
