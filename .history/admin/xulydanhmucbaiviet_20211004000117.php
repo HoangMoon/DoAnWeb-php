@@ -114,7 +114,7 @@
           <tr style="text-align:center">
             <td><?php echo $i ?></td>
             <td><?php echo $row_category['tendanhmuc'] ?></td>
-            <td style="width: 200px"><a href="?xoa=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> || <a href="?quanly=capnhat&id=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td style="width: 200px"><a href="?xoa=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-danger">Xóa</a> || <a href="?quanly=capnhat&id=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-warning">Cập nhật</a></td>
           </tr>
           <?php
           }

@@ -65,6 +65,7 @@
                 }
                 else {
                   echo 'Đang vận chuyển';
+
                 }
                 ?>
               </td>
@@ -94,6 +95,7 @@
               ?>
               </td>
               <td><a class="btn btn-primary" href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>&magiaodich=<?php echo $row_donhang['magiaodich']  ?>">Xem chi tiết</a></td>
+              
             </tr>
             <?php
             }

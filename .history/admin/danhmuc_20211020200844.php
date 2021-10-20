@@ -6,18 +6,18 @@
   if(isset($_POST['themdanhmuc'])) {
     $tendanhmuc = $_POST['danhmuc'];
 
-    $sql_insert = mysqli_query($con, "INSERT INTO tbl_danhmuc_tin(tendanhmuc) VALUES  ('$tendanhmuc')");
+    $sql_insert = mysqli_query($con, "INSERT INTO tbl_category(category_name) VALUES  ('$tendanhmuc')");
   }
   else if(isset($_POST['capnhatdanhmuc'])) {
     $id_danhmuc = $_POST['id_danhmuc']; 
     $tendanhmuc = $_POST['danhmuc'];
-    $sql_update = mysqli_query($con, "UPDATE tbl_danhmuc_tin SET tendanhmuc  = '$tendanhmuc WHERE danhmuctin_id = '$id_danhmuc");
-    header('Location: xulydanhmucbaiviet.php');
+    $sql_update = mysqli_query($con, "UPDATE `tbl_category` SET `category_name`='$tendanhmuc' WHERE `category_id`='$id_danhmuc'");
+    // header('Location: danhmuc.php');
   }
   if(isset($_GET['xoa'])) {
     $id = $_GET['xoa'];
 
-    $sql_delete = mysqli_query($con, "DELETE FROM tbl_danhmuc_tin WHERE danhmuctin_id = '$id'");
+    $sql_delete = mysqli_query($con, "DELETE FROM tbl_category WHERE category_id = '$id'");
   }
   
 ?>
@@ -67,16 +67,16 @@
       <?php
         if(isset($_GET['quanly'])=='capnhat') {
           $id_capnhat = $_GET['id'];
-          $sql_capnhat = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin WHERE danhmuctin_id = '$id_capnhat'");
+          $sql_capnhat = mysqli_query($con, "SELECT * FROM tbl_category WHERE category_id = '$id_capnhat'");
           $row_capnhat = mysqli_fetch_array($sql_capnhat);
           ?>
            <div class="col-md-4">
           <h4>Cập nhật danh mục</h4>
           <label for="">Tên danh mục</label>
           <form action="" method="POST">
-            <input type="text" name="danhmuc" class="form-control" value="<?php echo $row_capnhat['tendanhmuc'] ?>">
+            <input type="text" name="danhmuc" class="form-control" value="<?php echo $row_capnhat['category_name'] ?>">
             <br>
-            <input type="hidden" name="id_danhmuc" class="form-control" value="<?php echo $row_capnhat['danhmuctin_id'] ?>" >
+            <input type="hidden" name="id_danhmuc" class="form-control" value="<?php echo $row_capnhat['category_id'] ?>" >
             <input type="submit" name="capnhatdanhmuc" value="Cập nhật danh mục" class="btn btn-success">
           </form>
       </div>
@@ -84,7 +84,7 @@
         } else {
           ?>
            <div class="col-md-4">
-            <h4>Thêm bài viết</h4>
+            <h4>Thêm danh mục</h4>
             <label for="">Tên danh mục</label>
             <form action="" method="POST">
               <input type="text" name="danhmuc" class="form-control" placeholder="Tên danh mục...">
@@ -96,9 +96,9 @@
         }
       ?>
       <div class="col-md-8">
-      <h4>Liệt kê bài viết</h4>
+      <h4>Liệt kê danh mục</h4>
       <?php
-        $sql_select = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin  ORDER BY danhmuctin_id DESC");
+        $sql_select = mysqli_query($con, "SELECT * FROM tbl_category  ORDER BY category_id DESC");
       ?>
       <table class="table table-bordered">
         <tr style="text-align:center">
@@ -113,8 +113,8 @@
         ?>
           <tr style="text-align:center">
             <td><?php echo $i ?></td>
-            <td><?php echo $row_category['tendanhmuc'] ?></td>
-            <td style="width: 200px"><a href="?xoa=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> || <a href="?quanly=capnhat&id=<?php echo $row_category['danhmuctin_id'] ?>" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td><?php echo $row_category['category_name'] ?></td>
+            <td style="width: 200px"><a href="?xoa=<?php echo $row_category['category_id'] ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></a> || <a href="?quanly=capnhat&id=<?php echo $row_category['category_id'] ?>" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
           </tr>
           <?php
           }

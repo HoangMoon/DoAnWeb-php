@@ -248,7 +248,7 @@
             <td><?php echo $row_sp['category_name']?></td>
             <td><?php echo  number_format($row_sp['sanpham_gia']).'vnd' ?></td>
             <td><?php echo  number_format($row_sp['sanpham_giakhuyenmai']).'vnd' ?></td>
-            <td style="text-align: center;"><a style="font-size: 14px;" href="?xoa=<?php echo $row_sp['sanpham_id'] ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> <a href="xulysanpham.php?quanly=capnhat&capnhat_id=<?php echo $row_sp['sanpham_id'] ?>" style="font-size: 14px" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td style="text-align: center;"><a style="font-size: 14px;" href="?xoa=<?php echo $row_sp['sanpham_id'] ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> <a href="xulysanpham.php?quanly=capnhat&capnhat_id=<?php echo $row_sp['sanpham_id'] ?>" style="font-size: 14px" class="btn btn-warning">Cập nhật</a></td>
           </tr>
           <?php
           }

@@ -8,6 +8,7 @@
     $mahang = $_POST['mahang_xuly'];
 
     $sql_update_donhang = mysqli_query($con, "UPDATE tbl_donhang SET trangthai = '$xuly' WHERE mahang = '$mahang'");
+    $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET tinhtrangdon = '$xuly' WHERE magiaodich = '$mahang'");
   }
 ?>
 <?php
@@ -16,6 +17,16 @@
 
       $sql_delete_donhang = mysqli_query($con, "DELETE FROM tbl_donhang WHERE donhang_id = '$id'");
     }
+    if(isset($_GET['xacnhanhuy']) && $_GET['mahang']) {
+      $huydon = $_GET['xacnhanhuy'];
+      $magiaodich = $_GET['mahang'];
+    }
+    else {
+      $huydon = "";
+      $magiaodich = "";
+    }
+    $sql_update_donhang = mysqli_query($con, "UPDATE tbl_donhang SET huydon = '$huydon' WHERE mahang= '$magiaodich'");
+    $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET huydon = '$huydon' WHERE magiaodich= '$magiaodich'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Khách hàng</title>
+    <title>Đơn hàng</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +74,7 @@
        <?php
         if(isset($_GET['quanly'])=='xemdonhang') {
           $mahang = $_GET['mahang'];
-          $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_donhang,tbl_sanpham WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_donhang.mahang = '$mahang'");
+          $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_donhang,tbl_sanpham WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_donhang.mahang = '$mahang' group by donhang_id DESC");
         ?> 
         <div class="col-md-12 mb-3">
           <p style="font-size: 20px;">Xem chi tiết đơn hàng</p>
@@ -116,7 +127,7 @@
       <div class="col-md-12">
       <h4>Danh sách đơn hàng</h4>
       <?php
-        $sql_select = mysqli_query($con, "SELECT * FROM tbl_donhang, tbl_sanpham, tbl_khachhang WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id = tbl_donhang.khachhang_id  ORDER BY tbl_donhang.donhang_id DESC");
+        $sql_select = mysqli_query($con, "SELECT *, SUM(tbl_donhang.soluong*tbl_sanpham.sanpham_giakhuyenmai) AS 'tongtien'  FROM tbl_donhang, tbl_sanpham, tbl_khachhang WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id = tbl_donhang.khachhang_id  GROUP BY tbl_donhang.mahang DESC");
       ?>
         <table class="table table-bordered">
           <tr style="text-align:center">
@@ -125,7 +136,9 @@
             <th>Trạng thái đơn hàng</th>
             <th>Tên khách hàng</th>
             <th>Ngày tháng đặt</th>
+            <th>Tiền thanh toán</th>
             <th>Ghi chú</th>
+            <th>Hủy đơn hàng</th>
             <th>Quản lý</th>
           </tr>
           <?php
@@ -147,8 +160,20 @@
                </td>
               <td><?php echo $row_donhang['name'] ?></td>
               <td><?php echo $row_donhang['ngaythang'] ?></td>
+              <td><?php echo number_format($row_donhang['tongtien']).'vnđ' ?></td>
               <td><?php echo $row_donhang['note'] ?></td>
-              <td style="text-align: center;"><a style="font-size: 14px;display:block;" href="?xoa=<?php echo $row_donhang['donhang_id'] ?>" class="btn btn-danger mb-2"><i class="fa fa-trash" aria-hidden="true"></i></a> <a href="?quanly=xemdonhang&mahang=<?php echo $row_donhang['mahang'] ?>" style="font-size: 14px;display:block" class="btn btn-primary">Xem đơn hàng</a></td>
+              <td><?php 
+              if($row_donhang['huydon'] == 0) {
+              }
+              else if($row_donhang['huydon']==1) {
+                echo '<a href="xulydonhang.php?quanly=xemdonhang&mahang='.$row_donhang['mahang'].'&xacnhanhuy=2">Xác nhân hủy đơn</a>';
+              }
+              else {
+                echo 'Đã hủy đơn';
+              }
+              ?></td>
+              <td style="text-align: center;"><a style="font-size: 14px;display:block;" href="?xoa=<?php echo $row_donhang['donhang_id'] ?>" class="btn btn-danger mb-2"><i class="fa fa-trash" aria-hidden="true"></a>
+             <a href="?quanly=xemdonhang&mahang=<?php echo $row_donhang['mahang'] ?>" style="font-size: 14px;display:block" class="btn btn-primary">Xem đơn hàng</a></td>
             </tr>
             <?php
             }

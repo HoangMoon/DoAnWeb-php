@@ -2,21 +2,6 @@
   include '../db/conect.php';
   include '../admin/2404/incLogin.php'
 ?>
-<?php
-  if(isset($_POST['capnhatdonhang'])) {
-    $xuly = $_POST['xuly'];
-    $mahang = $_POST['mahang_xuly'];
-
-    $sql_update_donhang = mysqli_query($con, "UPDATE tbl_donhang SET trangthai = '$xuly' WHERE mahang = '$mahang'");
-  }
-?>
-<?php
-    if(isset($_GET['xoa'])) {
-      $id = $_GET['xoa'];
-
-      $sql_delete_donhang = mysqli_query($con, "DELETE FROM tbl_donhang WHERE donhang_id = '$id'");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Khách hàng</title>
+    <title>Trang chủ Admin</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,75 +43,62 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="row">
-          <div class="container">
-    <div class="row">
-       <?php
-        if(isset($_GET['quanly'])=='xemdonhang') {
-          $mahang = $_GET['mahang'];
-          $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_donhang,tbl_sanpham WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_donhang.mahang = '$mahang'");
-        ?> 
-        <div class="col-md-12 mb-3">
-          <p style="font-size: 20px;">Xem chi tiết đơn hàng</p>
-                <form action="" method="POST">
-            <table class="table table-bordered">
-            <tr style="text-align:center">
-              <th>STT</th>
-              <th>Mã hàng</th>
-              <th>Tên sản phẩm</th>
-              <th>Số lượng</th>
-              <th>Giá</th>
-              <th>Tổng tiền</th>
-              <th>Ngày tháng đặt</th>
-              <!-- <th>Quản lý</th> -->
-            </tr>
-            <?php
-            $i= 0;
-              while($row_donhang = mysqli_fetch_array($sql_chitiet)){
-                $i++;
-            ?>
-              <tr style="text-align:center">
-                <td><?php echo $i ?></td>
-                <td><?php echo $row_donhang['mahang'] ?></td>
-                <td><?php echo $row_donhang['sanpham_name'] ?></td>
-                <td><?php echo $row_donhang['soluong'] ?></td>
-                <td><?php echo number_format($row_donhang['sanpham_giakhuyenmai']).'vnđ' ?></td>
-                <td><?php echo number_format($row_donhang['soluong']*$row_donhang['sanpham_giakhuyenmai']).'vnđ'?></td>
-                <td><?php echo $row_donhang['ngaythang'] ?></td>
-                <input type="hidden" name="mahang_xuly" value="<?php echo $row_donhang['mahang'] ?>">
-              </tr>
-              <?php
-              }
-              ?>
-                  </table>
-                  <select name="xuly" id="" class="form-control">
-              <option value="1">Đã xử lý</option>
-              <option value="0">Chưa xử lý</option>
-            </select>
-            <br>
-            <input type="submit" value="Cập nhật đơn hàng" class="btn btn-success" name="capnhatdonhang">
-          </form>
-        </div>
-        <?php
-        } else {
-         ?> 
-         
-        <?php
-        }
-        ?>
-      <div class="col-md-12">
-      <h4>Danh sách đơn hàng</h4>
+          <div class="col-md-12">
+      <h4>khách hàng</h4>
       <?php
-        $sql_select = mysqli_query($con, "SELECT * FROM tbl_donhang, tbl_sanpham, tbl_khachhang WHERE tbl_donhang.sanpham_id = tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id = tbl_donhang.khachhang_id  ORDER BY tbl_donhang.donhang_id DESC");
+        $sql_select_khachhang = mysqli_query($con,"SELECT * FROM tbl_khachhang,tbl_giaodich WHERE tbl_khachhang.khachhang_id = tbl_giaodich.khachhang_id GROUP BY tbl_giaodich.magiaodich  ORDER BY tbl_khachhang.khachhang_id DESC");
       ?>
         <table class="table table-bordered">
           <tr style="text-align:center">
             <th>STT</th>
-            <th>Mã hàng</th>
-            <th>Trạng thái đơn hàng</th>
             <th>Tên khách hàng</th>
-            <th>Ngày tháng đặt</th>
-            <th>Ghi chú</th>
-            <th>Quản lý</th>
+            <th>Số điên thoạit</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Ngày mua</th>
+            <th>Quan Lý</th>
+          </tr>
+          <?php
+          $i= 0;
+            while($row_khachhang = mysqli_fetch_array($sql_select_khachhang)){
+              $i++;
+          ?>
+            <tr style="text-align:center">
+              <td><?php echo $i ?></td>
+              <td><?php echo $row_khachhang['name'] ?></td>
+              <td><?php echo $row_khachhang['phone'] ?></td>
+              <td><?php echo $row_khachhang['address'] ?></td>
+              <td><?php echo $row_khachhang['email'] ?></td>
+              <td><?php echo $row_khachhang['ngaythang'] ?></td>
+            <td style="text-align: center;"><a href="?quanly=xemgiaodich&khachhang=<?php echo $row_khachhang['magiaodich'] ?>" style="font-size: 14px;display:block" class="btn btn-primary">Xem giao dịch</a>
+          </td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
+      </div>
+
+
+      <div class="col-md-12">
+      <h4>Danh sách lịch sử đơn hàng</h4>
+      
+      <?php
+        if(isset($_GET['khachhang'])){
+          $magiaodich =$_GET['khachhang'];
+        }else{
+          $magiaodich = '';
+        }
+        $sql_dele = mysqli_query($con, "DELETE * FROM tbl_giaodich,tbl_khachhang,tbl_sanpham WHERE tbl_giaodich.sanpham_id = tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id=tbl_giaodich.khachhang_id  AND tbl_giaodich.magiaodich = '$magiaodich' AND huydon = '1'  ORDER BY tbl_giaodich.giaodich_id DESC");
+        $sql_select = mysqli_query($con, "SELECT * FROM tbl_giaodich,tbl_khachhang,tbl_sanpham WHERE tbl_giaodich.sanpham_id = tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id=tbl_giaodich.khachhang_id  AND tbl_giaodich.magiaodich = '$magiaodich'  ORDER BY tbl_giaodich.giaodich_id DESC");
+      ?>
+        <table class="table table-bordered">
+          <tr style="text-align:center">
+            <th>STT</th>
+            <th>Mã giao dịch</th>
+            <th>Tên sản phẩm</th>
+            <th>Ngày đặt</th>
+           
           </tr>
           <?php
           $i= 0;
@@ -135,30 +107,17 @@
           ?>
             <tr style="text-align:center">
               <td><?php echo $i ?></td>
-              <td><?php echo $row_donhang['mahang'] ?></td>
-              <td><?php 
-                if($row_donhang['trangthai'] == 0) {
-                  echo 'Chưa xử lý';
-                }
-                else {
-                  echo 'Đã xử lý';
-                }
-               ?>
-               </td>
-              <td><?php echo $row_donhang['name'] ?></td>
+              <td><?php echo $row_donhang['magiaodich'] ?></td>
+              <td><?php echo $row_donhang['sanpham_name'] ?></td>
               <td><?php echo $row_donhang['ngaythang'] ?></td>
-              <td><?php echo $row_donhang['note'] ?></td>
-              <td style="text-align: center;"><a style="font-size: 14px;display:block;" href="?xoa=<?php echo $row_donhang['donhang_id'] ?>" class="btn btn-danger mb-2"><i class="fa fa-trash" aria-hidden="true"></i></a> <a href="?quanly=xemdonhang&mahang=<?php echo $row_donhang['mahang'] ?>" style="font-size: 14px;display:block" class="btn btn-primary">Xem đơn hàng</a></td>
             </tr>
             <?php
             }
             ?>
         </table>
       </div>
-    </div>
-  </div>
-          </div>
-        </div>
+     </div>
+   </div>
         <!-- /page content -->
 
         <!-- footer content -->
@@ -193,7 +152,7 @@
     <script src="vendors/Flot/jquery.flot.js"></script>
     <script src="vendors/Flot/jquery.flot.pie.js"></script>
     <script src="vendors/Flot/jquery.flot.time.js"></script>
-    <script src="vendors/Flot/jquery.flot.stack.js"></script>
+<script src="vendors/Flot/jquery.flot.stack.js"></script>
     <script src="vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
     <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
