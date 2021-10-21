@@ -521,7 +521,7 @@ button.subscrice-btn {
 								<p>Free shipping order over $100</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/samsung-galaxy-a52-8gb-256gb-thumb-blue-600x600-600x600.jpg" alt="" class="img-fluid">
+								<img src="images/medium_372076_6443430sd.jpg" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>
