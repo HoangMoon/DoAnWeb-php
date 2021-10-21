@@ -10,10 +10,12 @@
     }
 ?>
 <?php
-  if(isset($_POST['sb-form'])) {
+  if(isset($_POST['capnhatdonhang'])) {
     $xuly = $_POST['xuly'];
-    $name = $_POST['name'];
-    $sql_update_lienhe = mysqli_query($con, "UPDATE tbl_lienhe SET phanhoi = '$xuly' WHERE name = '$name'");
+    $mahang = $_POST['mahang_xuly'];
+
+    $sql_update_donhang = mysqli_query($con, "UPDATE tbl_donhang SET trangthai = '$xuly' WHERE mahang = '$mahang'");
+    $sql_update_giaodich = mysqli_query($con, "UPDATE tbl_giaodich SET tinhtrangdon = '$xuly' WHERE magiaodich = '$mahang'");
   }
 ?>
 <?php
@@ -121,11 +123,6 @@ if(isset($_POST['header']) && isset($_POST['email'])){
           <div class="form-group col-md-12">
             <textarea name="message" style="width: 100%" id="" cols="30" rows="10"></textarea>
           </div>
-          <?php
-            $sql_lienhe = mysqli_query($con, "SELECT * FROM tbl_lienhe");
-            $row_lh = mysqli_fetch_array($sql_lienhe);
-          ?>
-          <input type="hidden" name="name" value="<?php echo $row_lh['name']?>">
           <br>
           <select name="xuly" id="" class="form-control">
             <option value="0">Chưa phản hồi</option>

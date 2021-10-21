@@ -12,8 +12,8 @@
 <?php
   if(isset($_POST['sb-form'])) {
     $xuly = $_POST['xuly'];
-    $name = $_POST['name'];
-    $sql_update_lienhe = mysqli_query($con, "UPDATE tbl_lienhe SET phanhoi = '$xuly' WHERE name = '$name'");
+
+    $sql_update_lienhe = mysqli_query($con, "UPDATE tbl_lienhe SET trangthai = '$xuly' WHERE mahang = '$mahang'");
   }
 ?>
 <?php
